@@ -23,7 +23,9 @@ describe('websocket', () => {
 
     ws.subscribe((data) => {
       if ('result' in data) {
-        console.log(data);
+        //console.log(data);
+        //すべての階層をログに表示
+        console.log(JSON.stringify(data, null, 4));
       }
       if ('error' in data) {
         console.error(data);
